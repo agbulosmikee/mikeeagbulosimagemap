@@ -1,0 +1,433 @@
+/* ----- GLOBAL STYLES ----- */
+body {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f4ee;
+    text-align: center;
+    padding-top: 10px; /* Ensure content is visible below the navbar */
+}
+
+p {
+    color: #333;
+}
+
+/* ----- NAVIGATION BAR ----- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #800020;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.navbar a {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 12px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: #C56C86;
+    border-radius: 5px;
+}
+
+/* ----- HERO SECTION ----- */
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 420px;
+    margin: 20px auto;
+    max-width: 90%;
+    gap: 20px;
+}
+
+.left-img, .right-img {
+    width: 48%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.left-img:hover, .right-img:hover {
+    opacity: 0.7;
+}
+
+/* ----- OVERLAPPING BOX ----- */
+.content-box {
+    position: absolute;
+    background: #800020;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 45%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-box h2 {
+    font-size: 2rem;
+    font-family: "Yeseva One", serif;
+    color: #faf2f5;
+    text-shadow: 2px 2px 10px rgba(37, 2, 20, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+p{
+    color: antiquewhite;
+}
+
+h1{
+    font-family: 'Yeseva One', serif;
+    position: relative;
+    display: inline-block;
+    font-size: 5em;
+    color: #b76e79; /* Gold text color */
+    -webkit-text-stroke: 1px #800020; 
+}
+/* ----- GALLERY SECTION ----- */
+.gallery {
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.gallery h3 {
+    font-size: 1.7rem;
+    font-family: "Yeseva One", serif;
+    color: #a52a2a;
+    margin-bottom: 15px;
+}
+
+/* Image Grid */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    width: 22%;
+    text-align: center;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.gallery-item p {
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.place-img {
+    width: 30%;  /* Makes the image smaller */
+    max-width: 250px; /* Ensures it doesn’t get too big */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Right Side - Content */
+.place-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Align text properly */
+}
+
+.place-img {
+    width: 35%;  /* Adjust size */
+    max-width: 280px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Right Side - Content */
+.place-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; /* Align text properly */
+}
+/* Main Container for Place Section */
+.place {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9e6e6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 98vw; /* Slightly wider */
+    max-width: 1900px;
+    margin: 20px auto; /* Moves it a bit to the right */
+    gap: 20px;
+    
+}
+
+
+
+/* Left Side - Image */
+.place-img {
+    width: 35%;  /* Adjust size */
+    max-width: 280px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Right Side - Content */
+.place-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* Align text properly */
+}
+
+/* Heading Styling */
+.place-content h2 {
+    font-family: 'Yeseva One', serif;
+    color: #8B0000;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Description Text */
+.place-content p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* List Styling */
+.activities {
+    display: flex; /* Make items appear in one line */
+    gap: 8px; /* Small space between items */
+    padding-left: 0; /* Remove default padding */
+    margin-bottom: 15px;
+    list-style: none; /* Remove default bullets */
+}
+
+.activities li {
+    background-color: #f4c2c2; /* Soft pink background */
+    padding: 5px 12px; /* Small padding inside */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 16px;
+    color: #8B0000; /* Burgundy text */
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text from breaking */
+}
+
+
+
+
+/* Activity Images */
+.activity-collage {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.activity-collage img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth effects */
+}
+
+
+.activity-collage img:hover {
+    transform: scale(1.8); 
+}
+
+.activity-collage:hover img {
+    opacity: 0.5;
+}
+
+.activity-collage img:hover {
+    opacity: 1;
+}
+
+.button-container {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.button-container button, button {
+    font-family: 'Oswald', sans-serif;
+    background-color: #b76e79;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.button-container button:hover, button:hover {
+    background-color: #9a4f5d;
+}
+
+.how-to-get-there {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.how-to-get-there h4 {
+    font-size: 22px;
+    color: #800020;
+}
+
+.travel-method {
+    margin-top: 15px;
+}
+
+.travel-method h5 {
+    font-size: 18px;
+    color: #333;
+}
+
+.travel-method i {
+    color: #8B0000;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.why-visit {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.why-visit h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #800020;
+}
+
+.scenery-gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.scenery-gallery img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.scenery-gallery img:hover {
+    transform: scale(1.1);
+}
+
+.special-reason, .how-to-get-there {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.special-description{
+    color:#333;
+}
+
+.special-heading{
+    font-size: 1.7rem;
+    font-family: "Yeseva One", serif;
+    color: #a52a2a;
+    margin-bottom: 15px;
+    color:#800020;
+}
+.travel-p{
+    color:#333;
+}
+
+.map-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.nz-map {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    border: 3px solid #75001e;
+    border-radius: 10px;
+}
+
+/* Styling for "How to Get There" */
+.how-to-get-there {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.travel-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.travel-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.travel-method {
+    flex: 1;
+    background: #f9f5e8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 30%;
+}
+
+.travel-method h5 {
+    color: #b76e79;
+    font-size: 18px;
+}
+
+.travel-method p {
+    font-size: 14px;
+    color: #444;
+}
